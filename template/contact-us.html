@@ -29,6 +29,19 @@
           <!-- start contact content -->
           <div class="mu-contact-content">           
             <div class="row">
+              <div class="col-md-12">
+                {% if messages %}
+                  <ul class="messages">
+                    {% for message in messages %}
+                      <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}  style="text-align: center;"> {{ message }} 
+                      </li>
+                      
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                
+              </div>
+              
               <div class="col-md-6">
                 <div class="mu-contact-left">
                   <h3>Address</h3>

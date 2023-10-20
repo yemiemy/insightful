@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from page.views import home,about,contact,service,summer,camp,blog,blog1,section,blog2,blog3,blog4,blog5,tutor,insight,daycare,study,store
+from page.views import home,about,contact,service,summer,camp,blog,blogpage,section,tutor,insight,daycare,study,store
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,11 +29,7 @@ urlpatterns = [
     path('summer/', summer,name='summer'),
     path('camp/', camp,name='camp'),
     path('blog/', blog,name='blog'),
-    path('blog1/', blog1,name='blog1'),
-    path('blog2/', blog2,name='blog2'),
-    path('blog3/', blog3,name='blog3'),
-    path('blog4/', blog4,name='blog4'),
-    path('blog5/', blog5,name='blog5'),
+    path('blog/<int:id>', blogpage,name='blogpage'),
     path('tutor/', tutor,name='tutor'),
     path('insight/', insight,name='insight'),
     path('daycare/', daycare,name='daycare'),
@@ -46,3 +42,8 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "Insightful EduWorld"
+admin.site.site_title = "Insightful EduWorld"
+admin.site.index_title = "Insightful EduWorld Admin"

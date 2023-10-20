@@ -228,7 +228,7 @@
                 <div class="col-md-4 col-sm-4">
                   <article class="mu-blog-single-item">
                     <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg1.jpg' %}" alt="img" height="200"></a>
+                      <a href="#"><img src="{% static 'assets/img/odyssey.jpeg' %}" alt="img" height="200"></a>
                       <figcaption class="mu-blog-caption">
                         <h3>The odyssey of Knowledge.</h3>
                       </figcaption>                      
@@ -242,7 +242,7 @@
                 <div class="col-md-4 col-sm-4">
                   <article class="mu-blog-single-item">
                     <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg2.jpg' %}" alt="img" height="200px"></a>
+                      <a href="#"><img src="{% static 'assets/img/raising.jpeg' %}" alt="img" height="200px"></a>
                       <figcaption class="mu-blog-caption">
                         <h3>Raising the bar</h3>
                       </figcaption>                      
@@ -258,7 +258,7 @@
                 <div class="col-md-4 col-sm-4">
                   <article class="mu-blog-single-item">
                     <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg3.png' %}" alt="img" height="200px"></a>
+                      <a href="#"><img src="{% static 'assets/img/learnn.jpeg' %}" alt="img" height="200px"></a>
                       <figcaption class="mu-blog-caption">
                         <h3>A place to learn, Connect and Achieve.</h3>
                       </figcaption>                      
@@ -411,50 +411,23 @@
             <!-- start from blog content   -->
             <div class="mu-from-blog-content">
               <div class="row">
+                {% for blog in blogs %}
                 <div class="col-md-4 col-sm-4">
                   <article class="mu-blog-single-item">
                     <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg1.jpg' %}" alt="img" height="200"></a>
+                      <a href="#"><img src="{{ blog.img.url }}" alt="img" height="200"></a>
                       <figcaption class="mu-blog-caption">
-                        <h3><a href="{% url 'blog1'%}">Insightful Champions meet Achiever #1</a></h3>
+                        <h4>{{ blog.title }}</h4>
                       </figcaption>                      
                     </figure>
                     <div class="mu-blog-description">
-                      <br><br><br><br>
-                      <p>Insightful Champions meeting with Pastor Dayo Ogunsanya, An author, professional therapist and a mother. In the video we ask important…</p>
-                      <a class="mu-read-more-btn" href="{% url 'blog1'%}">Read More</a>
+                      <br>
+                      <p>{{ blog.snippet }}</p>
+                      <a class="mu-read-more-btn" href="{% url 'blogpage' blog.id %}">Read More</a>
                     </div>
                   </article>
                 </div>
-                <div class="col-md-4 col-sm-4">
-                  <article class="mu-blog-single-item">
-                    <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg2.jpg' %}" alt="img" height="200px"></a>
-                      <figcaption class="mu-blog-caption">
-                        <h3><a href="{% url 'blog2'%}">Educational resources is a support, a complementary element, and key to education.</a></h3>
-                      </figcaption>                      
-                    </figure>
-                    <div class="mu-blog-description">
-                      <p>We know that parents want the best possible education for their children, that is the reason why we provide educational…</p>
-                      <a class="mu-read-more-btn" href="{% url 'blog2'%}">Read More</a>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                  <article class="mu-blog-single-item">
-                    <figure class="mu-blog-single-img">
-                      <a href="#"><img src="{% static 'assets/img/blg3.png' %}" alt="img" height="200px"></a>
-                      <figcaption class="mu-blog-caption">
-                        <h3><a href="{% url 'blog3'%}">Insightful EduWorld bridge the gap so that student can find the right school and thrive during...</a></h3>
-                      </figcaption>                      
-                    </figure>
-                    <div class="mu-blog-description">
-                      <p>Our excellent network with high schools and universities helps us to deliver superlative service to students. We are here to…</p>
-                      <a class="mu-read-more-btn" href="{% url 'blog3'%}">Read More</a>
-                    </div>
-                  </article>
-                </div>
-                
+                {% endfor %}
               </div>
             </div>     
             <!-- end from blog content   -->   

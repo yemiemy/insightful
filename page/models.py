@@ -11,6 +11,16 @@ class Team(models.Model):
     def __str__(self):
         return self.name
 
+class Blog(models.Model):
+    title = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to ='uploads/')
+    snippet = models.TextField()
+    body = models.TextField()
+    video_url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title
+
 
 class Category(models.Model):
     name = models.CharField(max_length=30)

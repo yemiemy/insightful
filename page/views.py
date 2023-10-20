@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Category, Product, Team
+from .models import Category, Product, Team, Blog
 from django.core.mail import send_mail
+from django.contrib import messages
 # Create your views here.
 
 
@@ -9,7 +10,7 @@ from django.core.mail import send_mail
 
 #HOME
 def home(request):
-	return render(request,"index.html",{'categories':Category.objects.all()})
+	return render(request,"index.html",{'categories':Category.objects.all(),'blogs':Blog.objects.all()[:3]})
 
 #about
 def about(request):
@@ -24,6 +25,7 @@ def contact(request):
 		print(name)
 		message = str(name)+"\n"+str(email)+"\n"+str(message)
 		send_mail('You got a mail!', message, '', ['fagoroyeayomide3243@gmail.com'])
+		messages.success(request, 'Submission successful')
 	return render(request,"contact-us.html",{'categories':Category.objects.all()})
 
 #service
@@ -40,27 +42,11 @@ def camp(request):
 
 #blog
 def blog(request):
-	return render(request,"blog.html",{'categories':Category.objects.all()})
+	return render(request,"blog.html",{'categories':Category.objects.all(),'blogs':Blog.objects.all() })
 
-#blog1
-def blog1(request):
-	return render(request,"blog-1.html",{'categories':Category.objects.all()})
-
-#blog2
-def blog2(request):
-	return render(request,"blog-2.html",{'categories':Category.objects.all()})
-
-#blog3
-def blog3(request):
-	return render(request,"blog-3.html",{'categories':Category.objects.all()})
-
-#blog4
-def blog4(request):
-	return render(request,"blog-4.html",{'categories':Category.objects.all()})
-
-#blog5
-def blog5(request):
-	return render(request,"blog-5.html",{'categories':Category.objects.all()})
+#blogpage
+def blogpage(request,id=id):
+	return render(request,"blogpage.html",{'categories':Category.objects.all(),'blog':Blog.objects.filter(id=id)[0]})
 
 #tutor
 def tutor(request):
@@ -77,9 +63,6 @@ def daycare(request):
 #study
 def study(request):
 	return render(request,"study.html",{'categories':Category.objects.all()})
-
-
-
 
 
 def store(request):
