@@ -1,0 +1,467 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+  <!-- Start Slider -->
+  <section id="mu-slider">
+    <!-- Start single slider item -->
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+          <img src="{% static 'assets/img/sl-1.jpeg' %}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <br>
+        <br>
+        <span></span>
+        <h2>Insightful EduWorld Inc </h2>
+        <p>Insightful EduWorld Inc is an educational resource learning space that provides various solutions for children's education.</p>
+        <a href="{% url 'about'%}" class="mu-read-more-btn">About Us</a>
+      </div>
+    </div>
+    <!-- Start single slider item -->
+    <!-- Start single slider item -->
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+          <img src="{% static 'assets/img/sl-2.jpeg' %}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <br>
+        <br>
+        <span></span>
+        <h2>Children on a Mission </h2>
+        <p>A platform for mentorship, leadership traits development, networking and academic growth</p>
+        <a href="{% url 'contact'%}" class="mu-read-more-btn">Contact Us</a>
+      </div>
+    </div>
+    <!-- Start single slider item -->
+    <!-- Start single slider item -->
+    <div class="mu-slider-single">
+      <div class="mu-slider-img">
+        <figure>
+          <img src="{% static 'assets/img/sl-3.jpeg' %}" alt="img">
+        </figure>
+      </div>
+      <div class="mu-slider-content">
+        <br>
+        <br>
+        <span></span>
+        <h2>Improve Your Reading Skills </h2>
+        <p>Group reading sessions with other insightful children and our in house experts tutor</p>
+        <a href="{% url 'contact'%}" class="mu-read-more-btn">Contact Us</a>
+      </div>
+    </div>
+    <!-- Start single slider item -->    
+  </section>
+  <!-- End Slider -->
+  
+  <!-- Start our teacher -->
+  <section id="mu-our-teacher">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-our-teacher-area">
+            <!-- begain title -->
+            <div class="mu-title">
+              <h2>Our Services</h2>
+            </div>
+            <!-- end title -->
+            <!-- begain our teacher content -->
+            <div class="mu-our-teacher-content">
+              <div class="row">
+                <div class="col-lg-3 col-md-3  col-sm-6">
+                  <div class="mu-our-teacher-single">
+                                       
+                    <div class="mu-ourteacher-single-content">
+                      <h4>Tutoring</h4>
+                      <br>
+                      <p>Looking for perfect tutor for your child? don't look further, at Insightful EduWorld we provide high ...</p>
+                      <a href="{% url 'tutor'%}" >Learn More</a>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <div class="mu-our-teacher-single">
+                                       
+                    <div class="mu-ourteacher-single-content">
+                      <h4>Insightful Champions</h4>
+                      <br>
+                      <p>We provide mentorship for children from age 9-16 years, we have...</p>
+                      <a href="{% url 'insight'%}" >Learn More</a>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <div class="mu-our-teacher-single">
+                                       
+                    <div class="mu-ourteacher-single-content">
+                      <h4>Daycare, After School and Summer Camp.</h4>
+                      <br>
+                      <p>We also provide after school for school age children from ...</p>
+                      <a href="{% url 'daycare'%}" >Learn More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <div class="mu-our-teacher-single">
+                                       
+                    <div class="mu-ourteacher-single-content">
+                      <h4>Study Abroad Educational Service.</h4>
+                      <br>
+                      <p>This is for students who want to study abroad, we can ...</p>
+                      <a href="{% url 'study'%}" >Learn More</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <!-- End our teacher content -->           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End our teacher -->
+
+  <!-- Start Partner course section -->
+  <section id="mu-latest">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-latest-area">
+            <!-- Start Title -->
+            <div class="mu-title">
+              <h2>Our Partners</h2>
+            </div>
+            <!-- End Title -->
+            <!-- Start latest course content -->
+            <div id="mu-latest-slide" class="mu-latest-content">
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/ACH-LOGO.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/tdbank.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/dk.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                  
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/applyboard.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/dss.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/lr.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-xs-2">
+                <div class="mu-latest-single">
+                  <figure class="mu-latest-img">
+                    <a href="#"><img src="{% static 'assets/img/wonderbly.png' %}" alt="img" width="80px" height="80px"></a>
+                    
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- End latest course content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End latest course section -->
+
+
+<!-- Start from blog -->
+  <section id="mu-from-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-from-blog-area">
+            <!-- start title -->
+            <div class="mu-title1">
+              <h2 >Why choose Insightful EduWorld for your children's learning space?</h2>
+              
+            </div>
+            <!-- end title -->  
+            <!-- start from blog content   -->
+            <div class="mu-from-blog-content">
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg1.jpg' %}" alt="img" height="200"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3>The odyssey of Knowledge.</h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+
+                      <p style="border-bottom: 4px solid #25026C;">We prioritize innovative and award-winning educational products, hand-selected by education experts, inspire children to read, encourage them to continue improving, and reward them for accomplishing milestones.</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg2.jpg' %}" alt="img" height="200px"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3>Raising the bar</h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <br>
+                      <br>
+                      <p style="border-bottom: 4px solid #25026C;">The Insightful Champions are raising the bar on children's education. Literacy learning continues through a variety of quality educational materials to widening children's intelligence.</p>
+                      
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg3.png' %}" alt="img" height="200px"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3>A place to learn, Connect and Achieve.</h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <p style="border-bottom: 4px solid #25026C;">Insightful Eduworld has been able to secure partnership with so many private and government organizations for your children's learning through adventure. We are committed to creating an Inspirational experience.</p>
+                      
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>     
+            <!-- end from blog content   -->   
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End from blog -->
+
+
+
+<!-- Start latest course section -->
+  <section id="mu-latest-courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-latest-courses-area">
+            <!-- Start Title -->
+            <div class="mu-title">
+              <h2>Check Our Book Store</h2>
+            </div>
+            <!-- End Title -->
+            <!-- Start latest course content -->
+            <div id="mu-latest-course-slide" class="mu-latest-courses-content">
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/black-african.jpeg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 4 %}" style="color: #25026C;">Black African</a>
+                      <span class="mu-course-price"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/children.jpg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 1 %}" style="color: #25026C;">Children</a>
+                      <span class="mu-course-price">1 Item</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/learning-material.jpeg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 6 %}" style="color: #25026C;">Learning Resources</a>
+                      <span class="mu-course-price">11 Items</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/motivation.jpeg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 5 %}" style="color: #25026C;">Motivational</a>
+                      <span class="mu-course-price"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/religion.jpeg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 3 %}" style="color: #25026C;">Religious</a>
+                      <span class="mu-course-price">3 Items</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="{% static 'assets/img/schoo-supplies.jpeg' %}" alt="img"></a>
+                    
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    
+                    <div class="mu-latest-course-single-contbottom">
+                      <a class="mu-course-details" href="{% url 'section' 2 %}" style="color: #25026C;">School Supplies</a>
+                      <span class="mu-course-price" href="#">1 Item</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End latest course content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End latest course section -->
+
+<!-- Start from blog -->
+  <section id="mu-from-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-from-blog-area">
+            <!-- start title -->
+            <div class="mu-title">
+              <h2 >From Blog </h2>
+              
+            </div>
+            <div class="col-md-12 col-sm-12" >
+                  <a href="{% url 'blog'%}"><p style="text-align: right; color: #25026C; ">See More</p></a>
+                  
+                </div>
+            <!-- end title -->  
+            <!-- start from blog content   -->
+            <div class="mu-from-blog-content">
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg1.jpg' %}" alt="img" height="200"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3><a href="{% url 'blog1'%}">Insightful Champions meet Achiever #1</a></h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <br><br><br><br>
+                      <p>Insightful Champions meeting with Pastor Dayo Ogunsanya, An author, professional therapist and a mother. In the video we ask important…</p>
+                      <a class="mu-read-more-btn" href="{% url 'blog1'%}">Read More</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg2.jpg' %}" alt="img" height="200px"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3><a href="{% url 'blog2'%}">Educational resources is a support, a complementary element, and key to education.</a></h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <p>We know that parents want the best possible education for their children, that is the reason why we provide educational…</p>
+                      <a class="mu-read-more-btn" href="{% url 'blog2'%}">Read More</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <article class="mu-blog-single-item">
+                    <figure class="mu-blog-single-img">
+                      <a href="#"><img src="{% static 'assets/img/blg3.png' %}" alt="img" height="200px"></a>
+                      <figcaption class="mu-blog-caption">
+                        <h3><a href="{% url 'blog3'%}">Insightful EduWorld bridge the gap so that student can find the right school and thrive during...</a></h3>
+                      </figcaption>                      
+                    </figure>
+                    <div class="mu-blog-description">
+                      <p>Our excellent network with high schools and universities helps us to deliver superlative service to students. We are here to…</p>
+                      <a class="mu-read-more-btn" href="{% url 'blog3'%}">Read More</a>
+                    </div>
+                  </article>
+                </div>
+                
+              </div>
+            </div>     
+            <!-- end from blog content   -->   
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End from blog -->
+{% endblock page_content %}

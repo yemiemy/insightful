@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}')">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+          <br><br>
+
+           <h2>About Us</h2>
+           <br><br>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+
+  <!-- Start error section  -->
+  <section id="mu-error">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+          <div class="mu-error-area">
+            
+            <h1>Our History</h1>
+            <p>Insightful EduWorld Inc is an educational resource learning space that provides various solutions for children’s education. This website is designed for mental and physical development of children and teenagers.</p>
+            <p>We know that parents want the best possible education for their children, that is the reason why we provide educational resources that will encourage and motivate children in the learning process and enhance them in different areas like cognitive, emotional, and social development.</p>
+            <p>We see educational resources as a support, a complementary element, and key to education. That is why we are providing various programs that will help children in learning.</p>
+            <span>Share this:</span>
+            
+          </div>
+          <div>
+            <a class="mu-post-btn" href="https://twitter.com/Insightful_edu"><span class="fa fa-twitter"></span> Twitter</a>
+            <a class="mu-post-btn" href="https://www.facebook.com/insightfuleduworld"><span class="fa fa-facebook"></span> Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- End error section  -->
+
+
+ <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-3">
+                <!-- start sidebar -->
+                <aside class="mu-sidebar">
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar" style="background-color: #f5f5f5;">
+                    <h3 style="background-color: #f5f5f5;">Our Team</h3>
+                    
+                  </div>
+                  <!-- end single sidebar -->
+                </aside>
+                <!-- / end sidebar -->
+             </div>
+              <div class="col-md-9">
+                <!-- start course content container -->
+                <div class="mu-course-container mu-blog-archive">
+                  <div class="row">
+                    {% for team in teams %}
+                    <div class="col-md-3 col-sm-3">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{{ team.img.url }}" alt="img" height="150px" style="border-radius: 20px;"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3>{{ team.name }}</h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>{{ team.designation }}</p>
+                          
+                        </div>
+                      </article> 
+                    </div>  
+                    {% endfor %}                
+                     
+                  </div>
+                </div>
+                <!-- end course content container -->
+                
+              </div>
+              
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+{% endblock page_content %}

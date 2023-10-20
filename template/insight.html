@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+ <!-- Page breadcrumb -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}')">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+          <br><br>
+           <h2>Insightful Champions</h2>
+           <br><br>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+
+ <!-- Start contact  -->
+ <section id="mu-contact">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-contact-area">
+          
+          <!-- start contact content -->
+          <div class="mu-contact-content">           
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                  <p>There are many questions children of nowadays want to ask, but we have discovered that they listen better if the answer is provided by someone apart from their parents.</p>
+
+                  <p>That is why we provide mentorship for children from age 9-16 years, we have great professionals that are ready to educate them on carrier talks, entrepreneurship and how to build their inner and outer confidence.</p>
+
+                  
+                  <p>They will have one on one opportunity with leaders all over the World in different walks of life.</p>
+                  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                  <img src="{% static 'assets/img/insight.jpeg' %}" width="450px" height="250px" style="border-radius: 20px;">
+                  <br>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <br><br><br>
+                
+              </div>
+              <div class="col-md-12">
+                <div class="mu-contact-right">
+                  <p>They will be groomed on how to potentially exemplify excellence and be trained on how to become public speakers that the world will be sorted after. They will be enlightened on different issues that might be affecting them as children and how they can overcome such issues. This is a life experience for your children, one on one with renowned World leaders.</p>
+                  
+                </div>
+              </div>
+              <div class="col-md-12">
+                <br>
+                <div class="col-md-6">
+                <div class="mu-contact-right">
+
+                  <h3>Would you like to know more about this service? Please feel free to talk to us</h3>
+                  
+                </div>
+              </div>
+                <div class="col-md-6">
+                <div class="mu-contact-right">
+                  
+                  <a class="mu-read-more-btn" href="{% url 'blog3'%}" style="background-color: #25026C">Contact Us Rightaway</a>
+                  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- end contact content -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End contact  -->
+
+{% endblock page_content %}

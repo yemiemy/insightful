@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+ <!-- Page breadcrumb -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}')">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+          <br><br>
+           <h2>Daycare, After School and Summer Camp.</h2>
+           <br><br>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+
+ <!-- Start contact  -->
+ <section id="mu-contact">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-contact-area">
+          
+          <!-- start contact content -->
+          <div class="mu-contact-content">           
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mu-contact-left">
+                  <p>Our daycare service is for 3 months to 4 years old. Our center has worked to incorporate early learning for every child along with provincial pedagogy for early learning to strengthen the quality of our program and ensure a positive experience that promotes the health, safety, nutrition and well being of your child.</p>
+                  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                  <img src="{% static 'assets/img/daycare1.jpeg' %}" width="450px" height="250px" style="border-radius: 20px;">
+                  <br>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                  <img src="{% static 'assets/img/daycare2.jpeg' %}" width="450px" height="250px" style="border-radius: 20px;">
+                  <br>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <br><br>
+                
+              </div>
+              <div class="col-md-12">
+                <div class="mu-contact-right">
+                  <p>We also provide after school for school age children from age 4- 12 years. We have professional teachers on ground that will assist your children with their homework.</p>
+                  <p>Our summer camp is always full of fun, children get to visit interesting places, learn and explore. We provide adequate care for them and they will also learn new things.</p>
+                  <p>Our facility is well taking care of in line with the Ontario ministry of health covid -19 regulations.</p>
+                  
+                </div>
+              </div>
+              <div class="col-md-12">
+                <br>
+                <div class="col-md-6">
+                <div class="mu-contact-right">
+
+                  <h3>Would you like to know more about this service? Please feel free to talk to us</h3>
+                  
+                </div>
+              </div>
+                <div class="col-md-6">
+                <div class="mu-contact-right">
+                  
+                  <a class="mu-read-more-btn" href="{% url 'blog3'%}" style="background-color: #25026C">Contact Us Rightaway</a>
+                  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- end contact content -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End contact  -->
+
+{% endblock page_content %}

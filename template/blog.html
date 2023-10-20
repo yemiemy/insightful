@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+  
+  <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}');">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+          <br><br>
+
+           <h2 style="color: #fff;">Latest From Us</h2>
+           <br><br>
+           
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+
+  <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- start course content container -->
+                <div class="mu-course-container mu-blog-archive">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{% static 'assets/img/blg1.jpg' %}" alt="img" height="200px"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="{% url 'blog1'%}">Insightful Champions meet Achiever #1</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>Insightful Champions meeting with Pastor Dayo Ogunsanya, An author, professional therapist and a mother. In the video we ask important…</p>
+                          <a class="mu-read-more-btn" href="{% url 'blog1'%}">Read More</a>
+                        </div>
+                      </article> 
+                    </div>                  
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{% static 'assets/img/blg2.jpg' %}" alt="img" height="200px"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="{% url 'blog2'%}">Educational resources is a support, a complementary element, and key to education.</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>We know that parents want the best possible education for their children, that is the reason why we provide educational…</p>
+                          <a class="mu-read-more-btn" href="{% url 'blog2'%}">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                   <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{% static 'assets/img/blg3.png' %}" alt="img" height="200px"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="{% url 'blog3'%}">Insightful EduWorld bridge the gap ...</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>Our excellent network with high schools and universities helps us to deliver superlative service to students. We are here to….</p>
+                          <a class="mu-read-more-btn" href="{% url 'blog3'%}">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{% static 'assets/img/blg4.jpg' %}" alt="img" height="200px"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="{% url 'blog4'%}">Education – what’s next for our kids?</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>The Covid-19-triggered conditional movement control order announced on Oct 14, 2020, has not only further impacted the Malaysian economy badly…</p>
+                          <a class="mu-read-more-btn" href="{% url 'blog4'%}">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <a href="#"><img src="{% static 'assets/img/blg5.jpg' %}" alt="img" height="200px"></a>
+                          <figcaption class="mu-blog-caption">
+                            <h3><a href="{% url 'blog5'%}">How to help your kids spot COVID-19 misinformation</a></h3>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>TORONTO — Neither parents nor Canadian schools have prepared students for the deluge of misinformation circulating online during the COVID-19…</p>
+                          <a class="mu-read-more-btn" href="{% url 'blog5'%}">Read More</a>
+                        </div>
+                      </article>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end course content container -->
+                
+              </div>
+            
+              
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  {% endblock page_content %}
