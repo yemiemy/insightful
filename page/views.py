@@ -63,7 +63,7 @@ def study(request):
 
 
 def store(request):
-	product_list = Product.objects.filter(is_active=True)
+	product_list = Product.objects.filter(is_active=True).order_by("-id")
 
 	paginator = Paginator(list(product_list), 6)
 	page = request.GET.get("page")
@@ -75,7 +75,7 @@ def store(request):
 
 def section(request,id=id):
 	category = Category.objects.filter(id=id)[0]
-	product_list = Product.objects.filter(category=category)
+	product_list = Product.objects.filter(category=category, is_active=True).order_by("-id")
 	paginator = Paginator(product_list, 6)
 	page = request.GET.get("page")
 
