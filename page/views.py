@@ -24,7 +24,7 @@ def contact(request):
 		message = request.POST.get('message')
 		print(name)
 		message = str(name)+"\n"+str(email)+"\n"+str(message)
-		send_mail('You got a mail!', message, '', ['fagoroyeayomide3243@gmail.com'])
+		send_mail('You got a mail!', message, '', ['info@insightfuleduworld.ca'])
 		messages.success(request, 'Submission successful')
 	return render(request,"contact-us.html",{'categories':Category.objects.all()})
 
@@ -42,7 +42,7 @@ def camp(request):
 
 #blog
 def blog(request):
-	return render(request,"blog.html",{'categories':Category.objects.all(),'blogs':Blog.objects.all() })
+	return render(request,"blog.html",{'categories':Category.objects.all(),'blogs':Blog.objects.order_by("-id") })
 
 #blogpage
 def blogpage(request,id=id):

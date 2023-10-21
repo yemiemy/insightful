@@ -2675,3 +2675,24 @@ img {
     font-size: 100px;
   }
 }
+
+
+.rounded-sm {
+  border-radius: 10px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.p-2 {
+  padding: 8px 8px 8px 8px;
+}
+
+.p-5 {
+  padding: 20px 20px 20px 20px;
+}
+
+.m-2 {
+  margin: 8px 8px 8px 8px;
+}
