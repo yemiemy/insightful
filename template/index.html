@@ -285,95 +285,22 @@
             <!-- End Title -->
             <!-- Start latest course content -->
             <div id="mu-latest-course-slide" class="mu-latest-courses-content">
+              {% for store_category in categories %}
               <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="mu-latest-course-single">
                   <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/black-african.jpeg' %}" alt="img"></a>
+                    <img src="{{store_category.image.url}}" alt="img" width="100%" height="100%">
                     
                   </figure>
                   <div class="mu-latest-course-single-content">
                     <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 4 %}" style="color: #25026C;">Black African</a>
-                      <span class="mu-course-price"></span>
+                      <a class="mu-course-details" href="{% url 'section' store_category.id %}" style="color: #25026C;">{{store_category.name}}</a>
+                      <span class="mu-course-price">{{store_category.product_set.count}} Item(s)</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="mu-latest-course-single">
-                  <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/children.jpg' %}" alt="img"></a>
-                    
-                  </figure>
-                  <div class="mu-latest-course-single-content">
-                    
-                    <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 1 %}" style="color: #25026C;">Children</a>
-                      <span class="mu-course-price">1 Item</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="mu-latest-course-single">
-                  <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/learning-material.jpeg' %}" alt="img"></a>
-                    
-                  </figure>
-                  <div class="mu-latest-course-single-content">
-                    
-                    <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 6 %}" style="color: #25026C;">Learning Resources</a>
-                      <span class="mu-course-price">11 Items</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="mu-latest-course-single">
-                  <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/motivation.jpeg' %}" alt="img"></a>
-                    
-                  </figure>
-                  <div class="mu-latest-course-single-content">
-                    
-                    <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 5 %}" style="color: #25026C;">Motivational</a>
-                      <span class="mu-course-price"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="mu-latest-course-single">
-                  <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/religion.jpeg' %}" alt="img"></a>
-                    
-                  </figure>
-                  <div class="mu-latest-course-single-content">
-                    
-                    <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 3 %}" style="color: #25026C;">Religious</a>
-                      <span class="mu-course-price">3 Items</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="mu-latest-course-single">
-                  <figure class="mu-latest-course-img">
-                    <a><img src="{% static 'assets/img/schoo-supplies.jpeg' %}" alt="img"></a>
-                    
-                  </figure>
-                  <div class="mu-latest-course-single-content">
-                    
-                    <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="{% url 'section' 2 %}" style="color: #25026C;">School Supplies</a>
-                      <span class="mu-course-price" href="#">1 Item</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <!-- End latest course content -->
           </div>
@@ -406,7 +333,7 @@
                 <div class="col-md-4 col-sm-4">
                   <article class="mu-blog-single-item">
                     <figure class="mu-blog-single-img">
-                      <img src="{{ blog.img.url }}" alt="img" height="200">
+                      <img src="{{ blog.img.url }}" alt="img" height="100%" width="100%">
                       <figcaption class="mu-blog-caption">
                         <h4>{{ blog.title }}</h4>
                       </figcaption>                      
