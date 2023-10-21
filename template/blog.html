@@ -32,17 +32,17 @@
                 <div class="mu-course-container mu-blog-archive">
                   <div class="row">
                     {% for blog in blogs %}
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-6 col-sm-6" style="height: 550px; min-height: 550px; max-height: 550px">
                       <article class="mu-blog-single-item">
                         <figure class="mu-blog-single-img">
                           <img src="{{ blog.img.url }}" alt="img" height="300px" width="100%">
                           <figcaption class="mu-blog-caption">
-                            <h2 style="font-weight: 400;">{{ blog.title }}</h2>
+                            <h2 style="font-weight: 400;">{{ blog.title | truncatechars:50 }}</h2>
                           </figcaption>                      
                         </figure>
                         
                         <div class="mu-blog-description">
-                          <p>{{ blog.body | safe | truncatewords:10}}</p>
+                          <p>{{ blog.body | safe | truncatewords:20}}</p>
                           <a class="mu-read-more-btn" href="{% url 'blogpage' blog.id %}">Read More</a>
                         </div>
                       </article> 
