@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from page.views import home,about,contact,service,summer,camp,blog,blogpage,section,tutor,insight,daycare,study,store
@@ -29,13 +29,15 @@ urlpatterns = [
     path('summer/', summer,name='summer'),
     path('camp/', camp,name='camp'),
     path('blog/', blog,name='blog'),
-    path('blog/<int:id>', blogpage,name='blogpage'),
+    path('blog/<int:id>/', blogpage,name='blogpage'),
     path('tutor/', tutor,name='tutor'),
     path('insight/', insight,name='insight'),
     path('daycare/', daycare,name='daycare'),
     path('study/', study,name='study'),
     path('store/', store,name='store'),
-    path('section/<int:id>', section,name='section'),
+    path('section/<int:id>/', section,name='section'),
+    # ckeditor
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 

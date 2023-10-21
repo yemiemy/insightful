@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
@@ -14,9 +15,10 @@ class Team(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=1000)
     img = models.ImageField(upload_to ='uploads/')
-    snippet = models.TextField()
-    body = models.TextField()
+    snippet = RichTextUploadingField()
+    body = RichTextUploadingField()
     video_url = models.URLField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
