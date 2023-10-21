@@ -15,7 +15,6 @@ class Team(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=1000)
     img = models.ImageField(upload_to ='uploads/')
-    snippet = RichTextUploadingField()
     body = RichTextUploadingField()
     video_url = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

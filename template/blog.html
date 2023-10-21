@@ -42,7 +42,7 @@
                         </figure>
                         
                         <div class="mu-blog-description">
-                          <p>{{ blog.snippet | safe | truncatewords:10}}</p>
+                          <p>{{ blog.body | safe | truncatewords:10}}</p>
                           <a class="mu-read-more-btn" href="{% url 'blogpage' blog.id %}">Read More</a>
                         </div>
                       </article> 
