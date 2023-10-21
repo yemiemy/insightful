@@ -8,7 +8,14 @@ from django.contrib import messages
 
 #HOME
 def home(request):
-	return render(request,"index.html",{'categories':Category.objects.all(),'blogs':Blog.objects.all()[:3]})
+	return render(
+		request,
+		"index.html",
+		{
+			'categories':Category.objects.all(),
+			'blogs':Blog.objects.all()[:3]
+		}
+	)
 
 #about
 def about(request):
