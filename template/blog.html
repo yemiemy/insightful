@@ -42,7 +42,7 @@
                         </figure>
                         
                         <div class="mu-blog-description">
-                          <p>{{ blog.snippet }}</p>
+                          <p>{{ blog.snippet | safe }}</p>
                           <a class="mu-read-more-btn" href="{% url 'blogpage' blog.id %}">Read More</a>
                         </div>
                       </article> 
