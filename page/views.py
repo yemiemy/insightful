@@ -6,8 +6,6 @@ from django.contrib import messages
 # Create your views here.
 
 
-
-
 #HOME
 def home(request):
 	return render(request,"index.html",{'categories':Category.objects.all(),'blogs':Blog.objects.all()[:3]})
@@ -22,7 +20,6 @@ def contact(request):
 		name = request.POST.get('author')
 		email = request.POST.get('email')
 		message = request.POST.get('message')
-		print(name)
 		message = str(name)+"\n"+str(email)+"\n"+str(message)
 		send_mail('You got a mail!', message, '', ['info@insightfuleduworld.ca'])
 		messages.success(request, 'Submission successful')
@@ -66,37 +63,22 @@ def study(request):
 
 
 def store(request):
-	# print(dir(Category.objects.filter(name="religious")[0].product.all()))
-	# print(Category.objects.filter(name="religious")[0].product.all())
-	# #print(Category.objects.filter(name="religious")[0].objects.all())
-	# cat = Category.objects.all()
-	# paginator = Paginator(cat, 2)  # Show 25 contacts per page.
 	product_list = Product.objects.filter(is_active=True)
-	
+
 	paginator = Paginator(list(product_list), 6)
 	page = request.GET.get("page")
 
 	products = paginator.get_page(page)
-	
-	# page_number = request.GET.get("page")
-	# page_obj = paginator.get_page(page_number)
+
 	return render(request, "store.html", {'products':products,'categories':Category.objects.all()})
 
 
 def section(request,id=id):
-	# print(dir(Category.objects.filter(name="religious")[0].product.all()))
-	# print(Category.objects.filter(name="religious")[0].product.all())
-	# #print(Category.objects.filter(name="religious")[0].objects.all())
-	# cat = Category.objects.all()
-	# paginator = Paginator(cat, 2)  # Show 25 contacts per page.
 	category = Category.objects.filter(id=id)[0]
 	product_list = Product.objects.filter(category=category)
-	print(product_list)
 	paginator = Paginator(product_list, 6)
 	page = request.GET.get("page")
 
 	products = paginator.get_page(page)
-	
-	# page_number = request.GET.get("page")
-	# page_obj = paginator.get_page(page_number)
+
 	return render(request, "section.html", {'products':products,'cat':Category.objects.filter(id=id)[0],'categories':Category.objects.all()})
