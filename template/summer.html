@@ -2,17 +2,18 @@
 {% load static %}
 
 {% block page_content %}
- <!-- Page breadcrumb -->
- <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}')">
+  
+  <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb" style="background-image: url('{% static 'assets/img/summer.png' %}');">
    <div class="container">
      <div class="row">
        <div class="col-md-12">
          <div class="mu-page-breadcrumb-area">
           <br><br>
 
-           <h2>Summer 2022</h2>
-           
+           <h2 style="color: #fff;">Summer Camps</h2>
            <br><br>
+           
          </div>
        </div>
      </div>
@@ -20,26 +21,45 @@
  </section>
  <!-- End breadcrumb -->
 
-  <!-- Start error section  -->
-  <section id="mu-error">
-    <div class="container">
-      <div class="row">
+  <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
        <div class="col-md-12">
-          <div class="mu-error-area">
-            <p>Our 2022 summer program will commence in the month of August and end in early September. We have varieties of programs for this year summer camp, namely, Reading Camp, French Language Camp and Python and Website design Camp.</p>
-            <p>We are introducing our 2 days Niagara fun tagged “Explore Niagara”, 2 days of fun activities and exploring interesting places in Niagara region Ontario Canada. We welcome children from different part of the world to come and experience Niagara with us.</p>
-            <span>Share this:</span>
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- start course content container -->
+                <div class="mu-course-container mu-blog-archive">
+                  <div class="row">
+                    {% for summer in summers %}
+                    <div class="col-md-6 col-sm-6" style="height: 550px; min-height: 550px; max-height: 550px">
+                      <article class="mu-blog-single-item">
+                        <figure class="mu-blog-single-img">
+                          <img src="{{ summer.img.url }}" alt="img" height="300px" width="100%">
+                          <figcaption class="mu-blog-caption">
+                            <h2 style="font-weight: 400;">{{ summer.title | truncatechars:50 }} {{ summer.year }}</h2>
+                          </figcaption>                      
+                        </figure>
+                        
+                        <div class="mu-blog-description">
+                          <p>{{ summer.body | safe | truncatewords:20}}</p>
+                          <a class="mu-read-more-btn" href="{% url 'camp' summer.id %}">Read More</a>
+                        </div>
+                      </article> 
+                    </div>                  
+                   {% endfor %}
+                    
+                  </div>
+                </div>
+                <!-- end course content container -->
+                
+              </div>
             
-          </div>
-          <div>
-            <a class="mu-post-btn" href="https://twitter.com/Insightful_edu"><span class="fa fa-twitter"></span> Twitter</a>
-            <a class="mu-post-btn" href="https://www.facebook.com/insightfuleduworld"><span class="fa fa-facebook"></span> Facebook</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- <!-- End error section  -->
+              
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
 
-
-{% endblock page_content %}
+  {% endblock page_content %}

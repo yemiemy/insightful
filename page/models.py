@@ -22,6 +22,16 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
 
+class Summer(models.Model):
+    title = models.CharField(max_length=1000)
+    img = models.ImageField(upload_to ='uploads/')
+    body = RichTextUploadingField()
+    year = models.CharField(max_length=1000, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title + ' ' +self.year
+
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
