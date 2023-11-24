@@ -36,7 +36,7 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config.get("SECRET_KEY")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["74.208.110.36"]
 
 
 # Application definition
