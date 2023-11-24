@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Category, Product, Team, Blog
+from .models import Category, Product, Team, Blog, Summer
 from django.core.mail import send_mail
 from django.contrib import messages
 # Create your views here.
@@ -38,11 +38,11 @@ def service(request):
 
 #summer
 def summer(request):
-	return render(request,"summer.html",{'categories':Category.objects.all()})
+	return render(request,"summer.html",{'categories':Category.objects.all(),'summers':Summer.objects.order_by("-id")})
 
 #camp
-def camp(request):
-	return render(request,"summercamp.html",{'categories':Category.objects.all()})
+def camp(request,id=id):
+	return render(request,"summercamp.html",{'categories':Category.objects.all(),'summer':Summer.objects.filter(id=id)[0]})
 
 #blog
 def blog(request):

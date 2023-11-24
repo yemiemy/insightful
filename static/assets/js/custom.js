@@ -139,8 +139,8 @@ jQuery(function($){
       arrows: false,
       infinite: true,
       speed: 200,
-      slidesToShow: 3,
-      slidesToScroll: 2,
+      slidesToShow: 6,
+      slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2500,
       responsive: [
@@ -156,8 +156,8 @@ jQuery(function($){
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 3,
+            slidesToScroll: 3
           }
         },
         {
