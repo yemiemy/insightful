@@ -28,8 +28,8 @@
           <div class="mu-error-area">
             
             <p>{{ blog.body | safe}}</p>
-            {% if blog.video_url  %}
-            <iframe width="500" height="281" src="{{ blog.video_url }}" title="{{ blog.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            {% if blog.video_url  %}            
+            <iframe width="560" height="315" src="{{ blog.video_url }}" title="{{ blog.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             {% endif %}
           </div>
           <div>
